@@ -87,13 +87,13 @@ public class SingleFileWriter {
 
    SingleFileWriter sfw;
    try {
-    sfw = new SingleFileWriter(new TachyonURI(args[0]), new TachyonURI(args[0]), 
+    sfw = new SingleFileWriter(new TachyonURI(args[0]), new TachyonURI(args[1]), 
 	WriteType.valueOf(args[2]));
     sfw.createFile();
     sfw.writeFile();
     sfw.deleteFile();
    } catch (Exception e) {
-     System.err.println("IO Exception" + e.getMessage());
+     System.err.println("Exception: " + e.getMessage());
    }
    return;
   }
