@@ -11,6 +11,6 @@ cmd=$(</dev/stdin)
 
 for t in ${target[@]}; do
 echo "Sending command to $t.........."
-ssh  $t "cd ~/git/tachyon; $cmd"
+ssh -t $t "cd ~/git/tachyon; $cmd"
 done
 
