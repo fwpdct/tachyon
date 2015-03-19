@@ -5,10 +5,12 @@
 
 target=(Carmel-3 Carmel-4 Carmel-5 Carmel-6)
 
-read cmd
+cmd=$(</dev/stdin)
+
+
 
 for t in ${target[@]}; do
 echo "Sending command to $t.........."
-ssh  $t $cmd
+ssh  $t "cd ~/git/tachyon; $cmd"
 done
 
