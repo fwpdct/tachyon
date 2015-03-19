@@ -1,4 +1,4 @@
 #!/bin/bash
 
-java -cp /home/tianc/git/tachyon/libexec/../core/target/tachyon-0.7.0-SNAPSHOT-jar-with-dependencies.jar:./target/pdct-testing-1.0.jar SingleFileWriter tachyon://localhost:19998 /SingleFileTest TRY_CACHE
+java -cp ../core/target/tachyon-0.7.0-SNAPSHOT-jar-with-dependencies.jar:./target/pdct-testing-1.0.jar SingleFileWriter tachyon://localhost:19998 /SingleFileTest TRY_CACHE
 
