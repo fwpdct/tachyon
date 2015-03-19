@@ -12,7 +12,8 @@ compile="mvn install -DskipTests"
 setworkers="cp -f pdct-testing/pdct_workers conf/workers"
 setenv="cp -f pdct-testing/pdct_tachyon_env conf/tachyon-env.sh"
 
-cmd="$update; $compile; $setworkers; $setenv"
+#cmd="$update; $compile; $setworkers; $setenv"
+cmd="$update; $setworkers; $setenv"
 
 for t in ${target[@]}; do
 echo "Sending command to $t.........."
@@ -21,5 +22,5 @@ done
 
 
 #start tachyon cluster
-#run="./bin/tachyon-start.sh all SudoMount"
-#ssh -t $target_master "cd ~/git/tachyon; $run"
+run="./bin/tachyon-start.sh all SudoMount"
+ssh -t $target_master "cd ~/git/tachyon; $run"
